@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Evenage Thelma Gorwa BYU-Idaho WDD 231 course home page">
+    <meta name="author" content="Evenage Thelma Gorwa">
+    <title>Evenage Thelma Gorwa | WDD 231</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/gatedate.js" defer></script>
+</head>
+
+
+<body>
+    <header>
+        <div class="topnav">
+            <h2>Evenage Thelma Gorwa</h2>
+            <img src="images/profile.jpg" alt="Evenage" />
+            <div id="burger-menu" class="burger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <nav class="topnav">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-items">
+                    <a class="nav-link" href="http://www.linkedin.com/in/thelmagorwa" target="-blank">LinkedIn</a>
+                </li>
+                <li class="nav-item"><a href="http://github.com/EvenageThelmaGorwa" target="-blank"
+                        class="nav-link">GitHub</a></li>
+                <li class="nav-item"><a href="chamber/index.html" target="-blank" class="nav-link">Chamber</a> </li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <h3 class="heading-with-line">Harare, Zimbabwe</h3>
+            <img src="images/lion.webp" alt="Lion" />
+        </section>
+
+        <section class="card">
+            <h3 class="headind-with-line">Course Work</h3>
+            <div id="courseWorkGrid"></div>
+        </section>
+        <section class="card-Certificate">
+            <h3 class="heading-with-inline">Web and Computer Programming Certificate</h3>
+            <h4>Total Credits :<span id="totalcredit"></span></h4>
+            <div class="buttons">
+                <button id="show-all">Show ALL</button>
+                <button id="show-cse">Show CSE</button>
+                <button id="show-wdd">Show WDD</button>
+            </div>
+            <div id="classesGrid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©<span id="currentyear"></span>💖 Evenage Thelma Gorwa 💖 Harare, Zimbabwe</p>
+        <p id="lastmodified"></p>
+    </footer>
+</body>
+
+</html>
