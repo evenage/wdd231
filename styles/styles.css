@@ -151,7 +151,6 @@ section {
   width: 100%;                /* Full width of the parent */
   max-width: 300px;          /* Optional: restrict card width */
   text-align: center;
-  justify-items: space-between;
 }
 
 
@@ -183,7 +182,7 @@ section {
   background-color: #868f38;
   padding: 20px;
   border-radius: 5px;
-  box-sizing: 0 0 10px rgba(0,0,0.1);
+  box-sizing: 10px rgba(0,0,0.1);
 }
 
 #course-list {
