@@ -78,6 +78,8 @@ const courses = [
     }
 ]
 
+
+
 /* Courses data */
 const classesGrid = document.getElementById("classesGrid");
 
@@ -132,21 +134,6 @@ const lastmodified = document.lastModified;
 document.getElementById("lastmodified").innerHTML =
   "Last Modification " + Date(lastmodified);
 
-/* Hamburger Menu*/
-const hamburger = document.querySelector("#burger-menu");
-const navMenu = document.querySelector(".nav_menu");
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav_link").forEach((n) => {
-  n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-  });
-});
 
 /*total courses*/
 
@@ -176,7 +163,97 @@ const credits = document.createElement("p");
   card.appendChild(coursecard);
   card.appendChild(credits);
 
+  const coursesList = [
+    { key: 1, course: 'WDD130', taken: true },
+    { key: 2, course: 'WDD131', taken: true },
+    { key: 3, course: 'CSE111', taken: true },
+    {key: 4, course: 'CSEPC11O', taken: true},
+    {key: 5, course: 'CIT111', taken: true},
+    {key: 6, course: 'CSE210', taken: false},
+    {key: 7, course: 'GS170', taken: false},
+    {key: 8,course: 'WDD231', taken: false},
 
+  ];
+  
+  const transformedCourses = courses.filter((course) => course.taken);
+
+  const courseList = document.getElementById('course-list');
+  
+  transformedCourses.forEach((course) => {
+      const listItem = document.createElement('li');
+      listItem.textContent = course.course;
+      courseList.appendChild(listItem);
+  });
+
+  const classesGrid = document.getElementById('classesGrid');
+
+// Function to render courses
+function renderCourses(coursesToShow) {
+  classesGrid.innerHTML = '';
+  coursesToShow.forEach((course) => {
+    const courseHTML = `
+      <div class="course ${course.taken ? 'taken' : 'not-taken'}">
+        ${course.course}
+      </div>
+    `;
+    classesGrid.insertAdjacentHTML('beforeend', courseHTML);
+  });
+}
+
+// Event listeners for buttons
+document.getElementById('show-all').addEventListener('click', () => {
+  renderCourses(coursesList);
+});
+
+document.getElementById('show-cse').addEventListener('click', () => {
+  const cseCourses = coursesList.filter((course) => course.course.startsWith('CSE'));
+  renderCourses(cseCourses);
+});
+
+document.getElementById('show-wdd').addEventListener('click', () => {
+  const wddCourses = coursesList.filter((course) => course.course.startsWith('WDD'));
+  renderCourses(wddCourses);
+});
+
+// Initial render
+renderCourses(coursesList);
+
+  
+  console.log(transformedCourses);
   document.getElementById("courseWorkGrid").appendChild(card)
 })
 
+const checkbox = document.getElementById('check');
+const menu = document.querySelector('.menu');
+
+checkbox.addEventListener('change', () => {
+  menu.classList.toggle('active');
+});
+const navigation = document.getElementById('navigation')
+const hamburger = document.getElementById('hamburger')
+
+hambuger.addEventListener('click', ()=>{
+  hamburger.classList.toggle('active');
+  navigation.classList.toggle('active');
+
+})
+
+function handleNav() {
+	if(!nav.classList.contains('navigation--active')){
+		nav.classList.add('navigation--active')
+		hamburger.classList.add('hamburger--active')
+	} else {
+		nav.classList.remove('navigation--active')
+		hamburger.classList.remove('hamburger--active')
+	}
+}
+
+
+const navigationlinks = document.querySelector('.navigation');
+const screenWidth = window.innerWidth;
+
+if (screenWidth <= 768) {
+  navigationlinks.style.display = 'none';
+} else {
+  navigationlinks.style.display = 'block';
+}

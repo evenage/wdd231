@@ -10,47 +10,6 @@ body {
   background-color: grey;
 }
 
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  transition: all 0.3s ease-in-out;
-  background-color: black;
-}
-
-.burger-menu {
-  display: block;
-  cursor: pointer;
-}
-
-.burger-menu.active .bar:nth-child(1) {
-  transform: translateY(11px) rotate(45deg);
-}
-
-.burger-menu.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.burger-menu.active .bar:nth-child(3) {
-  transform: translateY(-11px) rotate(-45deg);
-}
-
-
-.topnav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.topnav img {
-  border-radius: 5px;
-  margin: 5px;
-  width: 20%;
-  height: 80%;
-}
-
-
 header {
   background-color: rgb(70, 70, 192);
   color: white;
@@ -58,133 +17,240 @@ header {
   z-index: 100;
 }
 
-header>h2 {
-  font-size: 1.5rem;
-}
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav a {
-  color: #0c0c0c;
-  padding: 0.5rem 1rem;
-}
-
-nav ul {
-  list-style: none;
-}
-
-nav ul li {
+img {
+  border-radius: 2px;
+  margin: 2px;
+  width: 100px;
+  height: 100px;
   float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  font-size: 17px;
 }
 
-nav ul li a:hover {
-  background-color: #99c0b2;
+
+
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight:bold;
+}
+/* Style menu icon */
+.navigation {
+	list-style: none;
+	margin: 0 auto;
+	max-width: 760px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation a {
+	display: flex;
+	padding: 0.75rem;
+	color: black;
+	font-weight: 700;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover, navigation a:active {
+	color: white;
+	background-color: black;
+}
+
+
+#menu{
+  display: block;
+  padding: .5rem .75rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
   color: #000;
-  border-radius: 12px;
 }
 
-nav ul li a.active {
-  background-color: #0abe37;
-  color: #fff;
+#menu ::before{
+  content:"≡";
 }
+
+.show li{
+  display: block;
+}
+
+#menu.show::before{
+  content:"X";
+}
+
+.hamburger {
+  display: none;
+  flex-direction:column;
+  cursor: pointer;
+  align-items: end;
+}
+
+.hamburger .bar {
+  height: 4px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+}
+
+.hamburger.active+.navigation{
+  display: block;
+}
+
+
+.heading-with-line {
+  position: relative;
+  text-align: center;
+  background-color: #0f4402;
+}
+
+.heading-with-line::after {
+  position: absolute;
+  
+}
+
+p{
+  text-align:justify;
+}
+
+
+main {
+  display: flex;              /* Use flexbox */
+  flex-direction: column;     /* Stack items vertically */
+  align-items: center;        /* Center items horizontally */
+  padding: 20px;
+
+}
+
+section {
+  text-align: center;         /* Center text within the section */
+  margin: 20px 0;            /* Add vertical spacing between sections */
+  width: 100%;                /* Take full width */
+  max-width: 800px;          /* Optional: restrict section width */
+}
+
+.img2 {              /* Make images responsive */
+  height: 150px;                 /* Maintain aspect ratio */
+  margin: 15px 0;              /* Add space around the image */
+  border-radius: 10px;          /* Optional: add rounded corners */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  max-width: 100%;
+  padding:25px;
+  background-color: #0f4402;
+}
+
+.course-card {
+  background: #1f8506;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px 0;
+  width: 100%;                /* Full width of the parent */
+  max-width: 300px;          /* Optional: restrict card width */
+  text-align: center;
+  justify-items: space-between;
+}
+
+
+.work {
+  background: #1f8506;
+  border: 1px solid #02663c;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.courseWorkGrid{
+  background-color: #6c7ddf;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+  width: 100%;                /* Full width of the parent */
+  max-width: 300px;          /* Optional: restrict card width */
+  text-align: center; 
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+}
+
+.course{
+  background-color: #868f38;
+  padding: 20px;
+  border-radius: 5px;
+  box-sizing: 0 0 10px rgba(0,0,0.1);
+}
+
+#course-list {
+  padding: 0;
+  margin: 0;
+  display: contents;
+}
+
+#course-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#course-list li:last-child {
+  border-bottom: none;
+}
+
+.taken {
+  background-color: #3f81c7;
+}
+
+.not-taken {
+  background-color: #e79f9f;
+}
+
+
 
 footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: #0082e6;
 }
 
-.heading-with-line {
-  position: relative;
+
+
+  @media (max-width: 768px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    .navigation {
+      display: none;
+      flex-direction: row;
+  }
+
+  .navigation.active {
+      display: flex;
+  }
+
+  .hamburger {
+      display: flex;
+  }
 }
+    
+  
+  /* Responsive Design */
+@media (min-width: 768px) {
+  main {
+      flex-direction: row;      /* Change to row layout on larger screens */
+      justify-content: space-around; /* Space sections evenly */
+  }
 
-.heading-with-line::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -5px;
-  border-bottom: 2px solid #000;
-}
-
-main {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  margin: 3%;
-}
-
-.card {
-  border: 1px solid #000;
-  padding: 20px;
-  margin: 5px;
-  border-radius: 10px;
-}
-
-.card h3 {
-  text-align: center;
-  height: 50px;
-  padding: 2px;
-  width: 100%;
-  font-size: 150%;
-}
-
-.courseWorkCard {
-  border: 1px black solid;
-  transition: 0.3s;
-  margin: 5px 0;
-  border-radius: 8px;
-
-}
-
-.courseWorkCard>h4,
-p {
-  margin: 4px;
-
-}
-
-.courseWorkCard:hover {
-  background-color: grey;
-  color: #000;
-  transform: rotate(2deg);
-  transition: all 0.3s ease-in-out;
-}
-
-.Cardcontainer {
-  padding: 2px 5px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.buttons button {
-  margin: 0 10px;
-  padding: 10px 20px;
-  cursor: pointer;
-  background-color: #a5cbf3;
-  border: none;
-  color: #0c0c0c;
-  border-radius: 5px;
-}
-
-.buttons button:hover {
-  background-color: #04fc2d;
-}
-
-@media only screen and(min-width:768px) {
-    large{
-    display: flex;
-
+  section {
+      margin: 10px;             /* Reduce margin on larger screens */
+      flex: 1;                  /* Allow sections to grow */
+      max-width: 300px;         /* Restrict section width */
   }
 }

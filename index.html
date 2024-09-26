@@ -13,52 +13,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/gatedate.js" defer></script>
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
 </head>
 
 
 <body>
     <header>
-        <div class="topnav">
-            <h2>Evenage Thelma Gorwa | WDD 231</h2>
-            <img src="images/profile.jpg" alt="Evenage" />
-            <div id="burger-menu" class="burger-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-        <nav class="topnav">
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li class="nav-items">
-                    <a class="nav-link" href="http://www.linkedin.com/in/thelmagorwa" target="-blank">LinkedIn</a>
-                </li>
-                <li class="nav-item"><a href="http://github.com/EvenageThelmaGorwa" target="-blank"
-                        class="nav-link">GitHub</a></li>
-                <li class="nav-item"><a href="chamber/index.html" target="-blank" class="nav-link">Chamber</a></li>
-
+        <label class="logo">Evenage Thelma Gorwa</label>
+        <img src="images/profile.jpg" alt="Evenage">
+         <nav>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="http://www.linkedin.com/in/thelmagorwa">LinkedIn</a></li>
+                <li><a href="http://github.com/EvenageThelmaGorwa">GitHub</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
             </ul>
+            <!-- Hamburger menu icon -->
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
         </nav>
     </header>
     <main>
-        <section class="card">
+        <section class="img2">
             <h3 class="heading-with-line">Harare, Zimbabwe</h3>
             <img src="images/lion.webp" alt="Lion" />
+            <p>LION</p>
         </section>
 
-        <section class="card">
-            <h3 class="headind-with-line">Course Work</h3>
+        <section class="courseWorkGrid">
+            <h3 class="work">Course Work</h3>
             <div id="courseWorkGrid"></div>
         </section>
-        <section class="card-Certificate">
+        <section class="course-card">
             <h3 class="heading-with-inline">Web and Computer Programming Certificate</h3>
             <h4>Total Credits :<span id="totalcredit"></span></h4>
             <div class="buttons">
                 <button id="show-all">Show ALL</button>
                 <button id="show-cse">Show CSE</button>
                 <button id="show-wdd">Show WDD</button>
+                <div id="classesGrid"  class="grid-container"></div>
             </div>
-            <div id="classesGrid"></div>
+            
         </section>
     </main>
 
