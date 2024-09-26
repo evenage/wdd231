@@ -182,7 +182,8 @@ section {
   background-color: #868f38;
   padding: 20px;
   border-radius: 5px;
-  box-sizing: 10px rgba(0,0,0.1);
+  box-sizing: 10px ;
+  box-shadow: #000;
 }
 
 #course-list {
