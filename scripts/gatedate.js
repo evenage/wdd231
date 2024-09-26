@@ -232,7 +232,7 @@ checkbox.addEventListener('change', () => {
 const navigation = document.getElementById('navigation')
 const hamburger = document.getElementById('hamburger')
 
-hambuger.addEventListener('click', ()=>{
+const hambuger=addEventListener('click', ()=>{
   hamburger.classList.toggle('active');
   navigation.classList.toggle('active');
 
