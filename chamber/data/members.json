@@ -1,0 +1,59 @@
+[
+    {
+      "name": "Pakare Paye Arts.",
+      "address": "Norton, Zimbabwe",
+      "phone": "+263 7811 106 55",
+      "website": "https://pakarepayearts.com",
+      "image": "artwork.webp",
+      "membershipLevel": 3
+    },
+    {
+      "name": "Nico Sanderton's Art Gallery",
+      "address": "Victoria Falls, Zimbabwe",
+      "phone": "+263 77 261 9007",
+      "website": "https://nicosandertonsartgallery.com",
+      "image": "art-nature.jpg",
+      "membershipLevel": 2
+    },
+    {
+      "name": "Shona sculpture Gallery, Art Galleries",
+      "address": "20 Airport Rd, Harare",
+      "phone": "+263 779 635 444",
+      "website": "https://shonasculpturegalleryartgalleries.com",
+      "image": "elephant.jpg",
+      "membershipLevel": 3
+    },
+    {
+      "name": "National Gallery of Zimbabwe",
+      "address": "20 Julius Nyerere Way, Park, Ln, Harare , Zimbabwe",
+      "phone": "+263 8677 002043",
+      "website": "https://nationalgalleryofzimbabwe.com",
+      "image": "family.jpg",
+      "membershipLevel": 1
+    },
+    {
+      "name": "First Floor Gallery Harare",
+      "address": "3, Castille Court, 65 Josiah Tongogara St, Harare",
+      "phone": "+263 775 7090 31",
+      "website": "https://firstfloorgalleryharare.com",
+      "image": "RufaroProudOfMyChild.jpg",
+      "membershipLevel": 2
+    },
+    {
+      "name": "Tami Walker Fine Art Gallery",
+      "address": "Victoria Falls, Zimbabwe",
+      "phone": "+26377 500 4008",
+      "website": "https://tamiwalkerfineartgallery.com",
+      "image": "stonelove.jpg",
+      "membershipLevel": 1
+    },
+    {
+      "name": "Tich TheWatchmans Art Gallery ",
+      "address": "Victoria Falls, Zimbabwe",
+      "phone": "+263 772 619 9188",
+      "website": "https://tichthewatchmanartgallery.com",
+      "image": "women.jpg",
+      "membershipLevel": 3
+    }
+  ]
+  
