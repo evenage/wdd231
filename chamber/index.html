@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="ArtSpace - A creative hub for artists, galleries, and collectors to connect and explore stunning artwork.">
+    <meta name="author" content="ArtSpace Team">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="ArtSpace - Your Creative Hub">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://artspace.com/images/art-nature.jpg">
+    <meta property="og:url" content="https://artspace.github.io/wdd231/chamber/directory.html">">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.ico" type="images/x-icon">
+
+    <title>ArtSpace Directory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <script src="scripts/javascripts.js" defer></script>
+    <script src="data/members.json"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to ArtSpace Directory</h1>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="http://www.linkedin.com/in/thelmagorwa">LinkedIn</a></li>
+                <li><a href="http://github.com/EvenageThelmaGorwa">GitHub</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+            </ul>
+            <!-- Hamburger menu icon -->
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+        <!-- Hero Image Section -->
+        <section class="hero">
+            <h2>Where Creativity Meets Community</h2>
+            <div class="hero-content">
+                <img src="images/hero-image.webp" alt="hero">
+
+            </div>
+        </section>
+    </header>
+    <main>
+
+        <!-- Call to Action Section -->
+        <section class="cta">
+            <a href="#join" class="cta-button">Join Our Chamber of Commerce</a>
+        </section>
+
+        <!-- Current Events Section -->
+        <section>
+            <div class="event-container">
+                <div class="event-item">
+                    <h2>Special Event </h2>
+                    <p>Celebrate our holiday with us at Victoria Falls Art Gallery on 25 December this year, time from
+                        1200hrs featuring art, music and more.
+                    <p>On this day we will have our best artists those with gold in membership level, and we will
+                        be hosting musicians like Jar Praizer, Thomas Mapfumo, Winky D ans somemore.</p>
+                    </p>
+                </div>
+                <div class="event-item">
+                    <h2>Recurring Event </h>
+                        <p>First Friday Art Walk: Explore new exhibitions and meet local artists.
+                            Sunday Artist Market: shop unique art and handmade goods.
+                            Wednesday Art Talks: Engage with industry experts and artists</p>
+                </div>
+            </div>
+        </section>
+        <section>
+
+            <!-- Weather Section -->
+            <section class="weather">
+
+                <div class="weather-widget">
+                    <h3>Current Weather</h3>
+                    <p id="current-temperature"></p>
+                    <p id="current-weather-description"></p>
+                    <img src="images/02d@2x.png" alt="cloudy">
+                    <table>
+                        <tr>
+                            <th>Day</th>
+                            <th>Temperature</th>
+                            <th>Conditions</th>
+                            <th>Precipitation</th>
+                            <th>Wind</th>
+                        </tr>
+
+                        <tr>
+                            <td>Today (Oct 9)</td>
+                            <td>57°F - 60°F</td>
+                            <td>Low clouds</td>
+                            <td>1%</td>
+                            <td>9-10 mph</td>
+                        </tr>
+
+                        <tr>
+                            <td>Tomorrow (Oct 10)</td>
+                            <td>54°F - 65°F</td>
+                            <td>Low clouds</td>
+                            <td>25%</td>
+                            <td>10 mph</td>
+                        </tr>
+                        <tr>
+                            <td>Tomorrow (Oct 11)</td>
+                            <td>23-24°C</td>
+                            <td>Low clouds</td>
+                            <td>25%</td>
+                            <td>10 mph</td>
+                        </tr>
+
+
+                    </table>
+
+            </section>
+
+            <div>
+                <h3>Members Directory</h3>
+                <button class="toggle-button" onclick="toggleView()">Toggle View</button>
+
+                <div id="membersContainer" class="card-grid"></div>
+                <div id="spotlight-company"></div>
+                <div id="company-sport"></div>
+
+
+            </div>
+
+
+    </main>
+    <footer>
+        <p>Contact Us: info@artspace.com | +263 772 601 401</p>
+        <p>Developed by Evenage Thelma Gorwa | WDD 231</p>
+        <p>&copy; <span id="year"></span> ArtSpace | Last Updated: <span id="lastModified"></span></p>
+
+    </footer>
+</body>
+
+</html>

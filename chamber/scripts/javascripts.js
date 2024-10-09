@@ -75,6 +75,67 @@ function handleNav() {
 }
 
 
+// select HTML elements in the document
+const currentTemp = document.querySelector('#current-temp');
+const weatherIcon = document.querySelector('#weather-icon');
+const captionDesc = document.querySelector('figcaption');
+
+const myKey = 'e09f19d8ab2beffd71068cab9b257ae2';
+const myLat = '18.680920638925773';
+const myLong = '-34.00274806951326'
+
+//url
+const myUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${mylat}&lon=${mylon}&appid=${mykey}%units=imperial`
+
+async function apiFetch() {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data); // testing only
+            // displayResults(data); // uncomment when ready
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+function displayResults(data) {
+    console.log('hello')
+    myTown.innerHTML = data.name
+    myDescription.innerHTML = data.weather[0].Description
+    myTemperature.innerHTML = `${data.main.temp}&deg;F`
+    const iconsrc = `https://openweathermap.org/img/wn/${data.waether[0].icon}02d.png`
+myGraphic.setAttribute('SRC', iconsrc)
+myGraphic.setAttribute('alt', data.weather[0].description )
+
+
+}
+
+
+
+apiFetch();
+
+
+// 3-Day Forecast
+const forecastUrl = `(https://api.openweathermap.org/data/2.5/weather?q={Capetown, mfuleni},{7100}&appid={apiKey})`;
+fetch(forecastUrl)
+    .then(response => response.json())
+    .then(forecastData => {
+        const forecastContainer = document.getElementById('forecast-container');
+        forecastData.list.slice(0, 3).forEach(forecast => {
+            const forecastHtml = `
+            <div>
+              <h4>${new Date(forecast.dt * 1000).toLocaleDateString()}</h4>
+              <p>Temperature: ${forecast.main.temp}°C</p>
+            </div>
+          `;
+            forecastContainer.innerHTML += forecastHtml;
+        });
+    })
+
+
 const navigationlinks = document.querySelector('.navigation');
 const screenWidth = window.innerWidth;
 
@@ -84,3 +145,29 @@ if (screenWidth <= 768) {
   navigationlinks.style.display = 'block';
 }
 
+       
+
+      //members
+      const jsonData = 'chamber-members.json'; // Replace with JSON data source
+      const spotlightsContainer = document.getElementById('spotlights');
+      
+      fetch(jsonData)
+        .then(response => response.json())
+        .then(data => {
+          const silverGoldMembers = data.members.filter(member => member.membershipLevel === 'Silver' || member.membershipLevel === 'Gold');
+          const randomMembers = silverGoldMembers.sort(() => Math.random() - 0.5).slice(0, 3);
+          
+          randomMembers.forEach(member => {
+            const spotlightHtml = `
+              <div>
+                <h3>${member.companyName}</h3>
+                <img src="${member.logo}" alt="${member.companyName}">
+                <p>Phone: ${member.phone}</p>
+                <p>Address: ${member.address}</p>
+                <p><a href="${member.website}">Website</a></p >
+          <p>Membership Level: ${member.membershipLevel}</p>
+        </div>
+      `;
+      spotlightsContainer.innerHTML += spotlightHtml;
+    });
+  });
