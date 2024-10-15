@@ -44,18 +44,13 @@ function toggleView() {
 fetchMembers().then(members => displayMembers(members));
 
 // Display current year and last modification date in footer
+//* Footer */
+
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
-//* Footer */
-document.getElementById("currentyear").innerHTML = new Date().getFullYear();
 const lastmodified = document.lastModified;
 
-document.getElementById("lastmodified").innerHTML =
-  "Last Modification " + Date(lastmodified);
-
-
-
-  const navigation = document.getElementById('navigation')
+const navigation = document.getElementById('navigation')
 const hamburger = document.getElementById('hamburger')
 
 const hambuger=addEventListener('click', ()=>{
@@ -85,7 +80,7 @@ const myLat = '18.680920638925773';
 const myLong = '-34.00274806951326'
 
 //url
-const myUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${mylat}&lon=${mylon}&appid=${mykey}%units=imperial`
+const myUrl = `https://api.openweathermap.org/data/2.5/weather?lat={mylat}&lon={mylon}&appid={mykey}%units=imperial`
 
 async function apiFetch() {
     try {
@@ -119,22 +114,43 @@ apiFetch();
 
 
 // 3-Day Forecast
-const forecastUrl = `(https://api.openweathermap.org/data/2.5/weather?q={Capetown, mfuleni},{7100}&appid={apiKey})`;
-fetch(forecastUrl)
-    .then(response => response.json())
-    .then(forecastData => {
-        const forecastContainer = document.getElementById('forecast-container');
-        forecastData.list.slice(0, 3).forEach(forecast => {
-            const forecastHtml = `
-            <div>
-              <h4>${new Date(forecast.dt * 1000).toLocaleDateString()}</h4>
-              <p>Temperature: ${forecast.main.temp}°C</p>
-            </div>
-          `;
-            forecastContainer.innerHTML += forecastHtml;
-        });
+const apiKey = 'e09f19d8ab2beffd71068cab9b257ae2'; // Replace with your actual API key
+const city = 'Capetown';
+const postalCode = '7100'; // If needed, adjust this based on the query you want
+const forecastUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${postalCode}&appid=${apiKey}`;
+
+fetch (forecastUrl) 
+.then(response => {
+        // Check if the response is OK (status code 200)
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json(); // Parse JSON response
+    })
+    .then(data => {
+        console.log(data); // Handle the data as needed
     })
 
+    .then(forecastData => {
+      const forecastContainer = document.getElementById('forecast-container');
+      
+      // Here, you can access the current weather data instead of a forecast list
+      const forecastHtml = `
+          <div>
+            <h4>${new Date(forecastData.dt * 1000).toLocaleDateString()}</h4>
+            <p>Temperature: ${forecastData.main.temp}°C</p>
+            <p>Weather: ${forecastData.weather[0].description}</p>
+          </div>
+      `;
+      
+      forecastContainer.innerHTML = forecastHtml;
+    })
+    .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+    });
+  
+
+  
 
 const navigationlinks = document.querySelector('.navigation');
 const screenWidth = window.innerWidth;
