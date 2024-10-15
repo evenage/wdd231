@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="ArtSpace - A creative hub for artists, galleries, and collectors to connect and explore stunning artwork.">
+        <meta name="author" content="Evenage Thelma Gorwa">
+    
+        <!-- Facebook Meta Tags -->
+        <meta property="og:title" content="ArtSpace - Your Creative Hub">
+        <meta property="og:type" content="website for artists to sell their artwork">
+        <meta property="og:image" content="https://artspace.com/profile.jpg">
+        <meta property="og:url" content="https://www.artspace.com">
+        <link rel="icon"  href="favicon.ico">
+        <title>Join Us</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/chamber.css">
+        <script src="scripts/javascripts.js" defer></script>
+        <script src="data/members.json"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome Join Us</h1>
+        </header>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!-- Hamburger menu icon -->
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+            <main>
+                <section class="form-section">
+                  <h2>Membership Application</h2>
+            
+                  <form action="thankyou.html" method="get">
+                    <label for="first-name">First Name:
+                      <input type="text" id="first-name" name="first-name" title="First Name" autocomplete="given-name" required>
+                    </label>
+            
+                    <label for="last-name">Last Name:
+                      <input type="text" id="last-name" name="last-name" title="Last Name" autocomplete="family-name" required>
+                    </label>
+            
+                    <label for="title">Organization Title:
+                      <input type="text" id="title" name="organization-title" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z-\s]{7,}" required>
+                    </label>
+            
+                    <label for="email">Email:
+                      <input type="email" id="email" name="email" title="Email Address" autocomplete="email" placeholder="example@domain.com" required>
+                    </label>
+            
+                    <label for="phone">Mobile Phone:
+                      <input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required>
+                    </label>
+            
+                    <label for="organization">Organization Name:
+                      <input type="text" id="organization" name="organization" title="Organization Name" autocomplete="organization" required>
+                    </label>
+            <div class="card-container">
+                <div class="card">
+                    <div class="membership-cards">
+                    <label for="membership">Membership Level:
+                      <select id="membership" name="membership" required>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                      </select>
+                    </label>
+            
+                    <label for="description">Organization Description:
+                      <textarea id="description" name="description" title="Organization Description" rows="4"></textarea>
+                    </label>
+            
+                    <input type="hidden" name="timestamp" id="timestamp" value="">
+            
+                    <input type="submit" value="Submit">
+                  </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+            
+                <section class="membership-cards">
+                  <h3>Membership Levels</h3>
+                  <div class="card np-card">
+                    <h4>NP Membership</h4>
+                    <a href="#np-modal" class="modal-trigger">View Benefits</a>
+                  </div>
+            
+                  <div class="card bronze-card">
+                    <h4>Bronze Membership</h4>
+                    <a href="#bronze-modal" class="modal-trigger">View Benefits</a>
+                  </div>
+            
+                  <div class="card silver-card">
+                    <h4>Silver Membership</h4>
+                    <a href="#silver-modal" class="modal-trigger">View Benefits</a>
+                  </div>
+            
+                  <div class="card gold-card">
+                    <h4>Gold Membership</h4>
+                    <a href="#gold-modal" class="modal-trigger">View Benefits</a>
+                  </div>
+                </section>
+    
+     <!-- Modals for Membership Levels -->
+     <div id="np-modal" class="modal">
+        <div class="modal-content">
+          <h2>NP Membership Benefits</h2>
+          <p>Free membership for non-profit organizations.</p>
+          <button class="close-modal">Close</button>
+        </div>
+      </div>
+    
+      <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+          <h2>Bronze Membership Benefits</h2>
+          <p>Basic benefits with event discounts.</p>
+          <button class="close-modal">Close</button>
+        </div>
+      </div>
+    
+      <div id="silver-modal" class="modal">
+        <div class="modal-content">
+          <h2>Silver Membership Benefits</h2>
+          <p>Additional benefits with advertising options.</p>
+          <button class="close-modal">Close</button>
+        </div>
+      </div>
+    
+      <div id="gold-modal" class="modal">
+        <div class="modal-content">
+          <h2>Gold Membership Benefits</h2>
+          <p>Full benefits with premium event access and spotlight advertising.</p>
+          <button class="close-modal">Close</button>
+        </div>
+      </div>
+              </main>
+            
+              <footer>
+                <p>Contact Us: info@artspace.com | +263 772 601 401</p>
+                <p>Developed by Evenage Thelma Gorwa | WDD 231</p>
+                <p>&copy; <span id="year"></span> ArtSpace | Last Updated: <span id="lastModified"></span></p>
+    
+              </footer>
+            
+             
+            
+              <script src="scripts.js"></script>
+            </body>
+            </html>

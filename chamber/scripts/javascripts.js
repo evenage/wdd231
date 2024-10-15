@@ -171,3 +171,43 @@ if (screenWidth <= 768) {
       spotlightsContainer.innerHTML += spotlightHtml;
     });
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Set the current timestamp when the form loads
+    const timestampField = document.getElementById('timestamp');
+    const currentTimestamp = new Date().toISOString();
+    timestampField.value = currentTimestamp;
+  
+    // Modal functionality
+    const modalTriggers = document.querySelectorAll('.modal-trigger');
+    const modals = document.querySelectorAll('.modal');
+    const closeModalButtons = document.querySelectorAll('.close-modal');
+  
+    // Function to open a modal
+    modalTriggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetModal = document.querySelector(trigger.getAttribute('href'));
+        targetModal.style.display = 'flex';
+      });
+    });
+  
+    // Function to close modals
+    closeModalButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        modals.forEach(modal => {
+          modal.style.display = 'none';
+        });
+      });
+    });
+  
+    // Close the modal when clicking outside of it
+    window.addEventListener('click', (e) => {
+      modals.forEach(modal => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });
+  });
+  

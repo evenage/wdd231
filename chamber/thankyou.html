@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ArtSpace - A creative hub for artists, galleries, and collectors to connect and explore stunning artwork.">
+<meta name="author" content="Evenage Thelma Gorwa">
+  <title>Thank You</title>
+  <link rel="stylesheet" href="chamber.css">
+  <script src="scripts/javascripts.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Thank You for Joining</h1>
+  </header>
+
+  <main>
+    <section class="confirmation-section">
+      <h2>Your Application Information</h2>
+      <p>First Name: <span id="confirm-first-name"></span></p>
+      <p>Last Name: <span id="confirm-last-name"></span></p>
+      <p>Email: <span id="confirm-email"></span></p>
+      <p>Phone: <span id="confirm-phone"></span></p>
+      <p>Organization: <span id="confirm-organization"></span></p>
+      <p>Timestamp: <span id="confirm-timestamp"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Chamber of Commerce</p>
+  </footer>
+
+  <script>
+    // Extract URL parameters and display them
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById('confirm-first-name').innerText = urlParams.get('first-name');
+    document.getElementById('confirm-last-name').innerText = urlParams.get('last-name');
+    document.getElementById('confirm-email').innerText = urlParams.get('email');
+    document.getElementById('confirm-phone').innerText = urlParams.get('phone');
+    document.getElementById('confirm-organization').innerText = urlParams.get('organization');
+    document.getElementById('confirm-timestamp').innerText = urlParams.get('timestamp');
+  </script>
+</body>
+</html>
