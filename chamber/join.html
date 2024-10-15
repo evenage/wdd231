@@ -40,10 +40,15 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <!-- Hamburger menu icon -->
-            <div class="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776; <!-- Hamburger icon -->
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="menu"  id="menu">
+                
+
+            </div>
             </div>
         </nav>
     </header>
@@ -75,8 +80,6 @@
                 <label for="phone">Mobile Phone:
                     <input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required>
                 </label>
-            </div>
-        </div>
 
                 <label for="organization">Organization Name:
                     <input type="text" id="organization" name="organization" title="Organization Name"
@@ -86,21 +89,21 @@
                     <div class="card">
                         <label for="membership">Membership Level:
                             <select id="membership" name="membership" required>
-                                <option value="non-profit">NP Membership</option>
                                 <option value="bronze">Bronze Membership</option>
                                 <option value="silver">Silver Membership</option>
                                 <option value="gold">Gold Membership</option>
+                                <option value="non-profit">NP Membership</option>
                             </select>
                         </label>
-                    </form>
-                        <label for="description">Organization Description:
-                            <textarea id="description" name="description" title="Organization Description"
-                                rows="4"></textarea>
-                        </label>
+                    </div>
+                </div>
+                <label for="description">Organization Description:
+                    <textarea id="description" name="description" title="Organization Description" rows="4"></textarea>
+                </label>
 
-                        <input type="hidden" name="timestamp" id="timestamp" value="">
-
-                        <input type="submit" value="Submit">
+                <input type="hidden" name="timestamp" id="timestamp" value="">
+                <input type="submit" value="Submit">
+            </form>
         </section>
 
 
