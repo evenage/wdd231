@@ -52,6 +52,7 @@ header {
 h1,h2,h3,h4,h5{
     font-weight: bold;
     font-size:x-large;
+    color: yellow;
 }
 
 h1{
@@ -88,7 +89,7 @@ width: 40%;
 
 img{
     justify-content: space-between;
-    
+
 }
 
 
