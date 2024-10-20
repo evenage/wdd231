@@ -2,70 +2,66 @@
 <html lang="en-US">
 
 <head>
+    <!-- Meta Tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <!-- Meta Tags -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
-        <!-- SEO Meta Tags -->
-        <meta name="description" content="ArtSpace - A creative hub for artists, galleries, and collectors to connect and explore stunning artwork.">
-        <meta name="author" content="ArtSpace Team">
-    
-        <!-- Facebook Meta Tags -->
-        <meta property="og:title" content="ArtSpace - Your Creative Hub">
-        <meta property="og:type" content="website for artists to sell their artwork">
-        <meta property="og:image" content="https://artspace.com/profile.jpg">
-        <meta property="og:url" content="https://www.artspace.com">
-        <link rel="icon"  href="favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <title>ArtSpace Directory</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/chamber.css">
-        <script src="scripts/javascripts.js" defer></script>
-        <script src="data/members.json"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Welcome to ArtSpace Directory</h1>
-        
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="ArtSpace - A creative hub for artists, galleries, and collectors to connect and explore stunning artwork.">
+    <meta name="author" content="ArtSpace Team">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="ArtSpace - Your Creative Hub">
+    <meta property="og:type" content="website for artists to sell their artwork">
+    <meta property="og:image" content="https://artspace.com/profile.jpg">
+    <meta property="og:url" content="https://www.artspace.com">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <title>ArtSpace Directory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <script src="scripts/javascripts.js" defer></script>
+    <script src="data/members.json"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to ArtSpace Directory</h1>
+
         <nav>
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
-              <i class="fas fa-bars"></i>
+                <i class="fas fa-bars"></i>
             </label>
 
             <div class="nav-mobile w3-animate-right">
                 <!-- Menu items -->
-               </div>
+            </div>
             <div class="nav-mobile">
-            <a href="index.html">Home</a>
-            <a href="directory.html">Directory</a>
-            <a href="events.html">Events</a>
-            <a href="contact.html">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
             </div>
         </nav>
     </header>
-        <main>
-                <h2>Members Directory</h2>
-                <button class="toggle-button" onclick="toggleView()">Toggle View</button>
-        
-                <div id="membersContainer" class="card"></div>
-            </main>
-        <footer>
-            <p>Contact Us: info@artspace.com | +263 772 601 401</p>
-            <p>Developed by Evenage Thelma Gorwa | WDD 231</p>
-            <p>&copy; <span id="year"></span> ArtSpace | Last Updated: <span id="lastModified"></span></p>
+    <main>
+        <h2>Members Directory</h2>
+        <button class="toggle-button" onclick="toggleView()">Toggle View</button>
 
-        </footer>
-    </body>
-    
-    </html>
-    </body>
-    </html>
-    
+        <div id="membersContainer" class="card"></div>
+    </main>
+    <footer>
+        <p>Contact Us: info@artspace.com | +263 772 601 401</p>
+        <p>Developed by Evenage Thelma Gorwa | WDD 231</p>
+        <p>&copy; <span id="year"></span> ArtSpace | Last Updated: <span id="lastModified"></span></p>
+
+    </footer>
+</body>
+
+</html>
