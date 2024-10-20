@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="ArtSpace - A creative hub for artists, galleries, and collectors to connect and explore stunning artwork.">
+    <meta name="author" content="Evenage Thelma Gorwa">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="ArtSpace - Your Creative Hub">
+    <meta property="og:type" content="website for artists to sell their artwork">
+    <meta property="og:image" content="https://artspace.com/profile.jpg">
+    <meta property="og:url" content="https://www.artspace.com">
+    <link rel="icon" href="favicon.ico">
+    <title>Discover</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <script src="scripts/javascripts.js" defer></script>
+    <script src="data/members.json"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Discover Everything with Us</h1>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <div class="nav-mobile w3-animate-right">
+                <!-- Menu items -->
+            </div>
+            <ul class="nav-mobile">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="thankyou.html">Thank you</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <aside class="sidebar">
+            <h2>Visitor Information</h2>
+            <div id="last-visit-message"></div>
+            <h3>Upcoming Events</h3>
+            <ul>
+                <li>Community Festival - June 10</li>
+                <li>Artist Hosting - Every Saturday</li>
+                <li>Art Walk - July 15</li>
+            </ul>
+        </aside>
+
+        <section class="container">
+            <h2>Local Attractions</h2>
+            <figure>
+                <img class="hover" src="images/ancient-face.jpeg" alt="ancient-face" loading="lazy" width="250"
+                    height="167">
+                <figcaption> ancient-face</figcaption>
+            </figure>
+            <figure>
+                <img class="hover" src="images/artlanta.JPG" alt="motherhood" loading="lazy" width="250" height="167">
+                <figcaption>Artlanta</figcaption>
+            </figure>
+            <figure>
+                <img class="hover" src="images/claypots.jpeg" alt="pots made of clay soil" loading="lazy" width="250"
+                    height="167">
+                <figcaption>Claypots</figcaption>
+            </figure>
+            <figure>
+                <img class="hover" src="images/family-art.jpeg" alt="family time" loading="lazy" width="250"
+                    height="167">
+                <figcaption>Family Art</figcaption>
+            </figure>
+            <figure>
+                <img class="hover" src="images/stoneage-art.jpg" alt="a drawing of long time ago" loading="lazy"  width="250" height="167">
+                <figcaption>Stoneage</figcaption>
+            </figure>
+            <figure>
+                <img class="hover" src="images/zizi.jpg" alt="AN Owl" loading="lazy" width="250" height="167">
+                <figcaption>Zizi</figcaption>
+            </figure>
+        </section>
+
+    </main>
+    <script>  
+     // LocalStorage logic for last visit date
+        const lastVisit = localStorage.getItem('lastVisit');
+        const messageContainer = document.getElementById('last-visit-message');
+        const currentTime = Date.now();
+        let message;
+
+        if (!lastVisit) {
+            message = "Welcome! Let us know if you have any questions.";
+        } else {
+            const lastVisitDate = new Date(Number(lastVisit));
+            const timeDifference = currentTime - lastVisitDate.getTime();
+            const daysSinceLastVisit = Math.floor(timeDifference / (1000 * 3600 * 24));
+
+            if (daysSinceLastVisit < 1) {
+                message = "Back so soon! Awesome!";
+            } else {
+                message = `You last visited ${daysSinceLastVisit} ${daysSinceLastVisit === 1 ? 'day' : 'days'} ago.`;
+            }
+        }
+
+        localStorage.setItem('lastVisit', currentTime);
+        messageContainer.textContent = message;
+    </script>
+    <footer>
+        <p>Contact Us: info@artspace.com | +263 772 601 401</p>
+        <p>Developed by Evenage Thelma Gorwa | WDD 231</p>
+        <p>&copy; <span id="year"></span> ArtSpace | Last Updated: <span id="lastModified"></span></p>
+
+    </footer>
+</body>
+
+</html>

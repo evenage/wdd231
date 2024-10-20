@@ -35,17 +35,27 @@
             <h1>Welcome to ArtSpace Directory</h1>
         
         <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+
+            <div class="nav-mobile w3-animate-right">
+                <!-- Menu items -->
+               </div>
+            <div class="nav-mobile">
             <a href="index.html">Home</a>
             <a href="directory.html">Directory</a>
             <a href="events.html">Events</a>
             <a href="contact.html">Contact</a>
+            </div>
         </nav>
     </header>
         <main>
                 <h2>Members Directory</h2>
                 <button class="toggle-button" onclick="toggleView()">Toggle View</button>
         
-                <div id="membersContainer" class="card-grid"></div>
+                <div id="membersContainer" class="card"></div>
             </main>
         <footer>
             <p>Contact Us: info@artspace.com | +263 772 601 401</p>
