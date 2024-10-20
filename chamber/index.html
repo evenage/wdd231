@@ -2,11 +2,8 @@
 <html lang="en-US">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-
     <!-- Meta Tags -->
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -19,11 +16,8 @@
     <meta property="og:title" content="ArtSpace - Your Creative Hub">
     <meta property="og:type" content="website">
     <meta property="og:image" content="http://artspace.com/images/art-nature.jpg">
-    <meta property="og:url" content="https://artspace.github.io/wdd231/chamber/directory.html">">
-    <link rel="icon" href="images/favicon.ico">
-    <link rel="icon" href="images/favicon.ico" type="images/x-icon">
-
-    <title>ArtSpace Directory</title>
+    <meta property="og:url" content="https://artspace.github.io/wdd231/chamber/directory.html">
+    <title>Directory</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,12 +33,12 @@
         <nav>
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
-              <i class="fas fa-bars"></i>
+                <i class="fas fa-bars"></i>
             </label>
 
             <div class="nav-mobile w3-animate-right">
                 <!-- Menu items -->
-               </div>
+            </div>
             <ul class="nav-mobile">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
@@ -64,7 +58,8 @@
     <main>
 
         <!-- Call to Action Section -->
-        <section class="cta">
+        <section> 
+            <h3>Call to action</h3>
             <a href="#join" class="cta-button">Join Our Chamber of Commerce</a>
         </section>
 
@@ -77,75 +72,65 @@
                         1200hrs featuring art, music and more.
                     <p>On this day we will have our best artists those with gold in membership level, and we will
                         be hosting musicians like Jar Praizer, Thomas Mapfumo, Winky D ans somemore.</p>
-                    </p>
                 </div>
                 <div class="event-item">
-                    <h2>Recurring Event </h>
-                        <p>First Friday Art Walk: Explore new exhibitions and meet local artists.
-                            Sunday Artist Market: shop unique art and handmade goods.
-                            Wednesday Art Talks: Engage with industry experts and artists</p>
+                    <h2>Recurring Event </h2>
+                    <p>First Friday Art Walk: Explore new exhibitions and meet local artists.
+                    <p> Sunday Artist Market: shop unique art and handmade goods.</p>
+                    <p> Wednesday Art Talks: Engage with industry experts and artists.</p>
                 </div>
             </div>
         </section>
-        <section>
+        <!-- Weather Section -->
+        <section class="weather">
 
-            <!-- Weather Section -->
-            <section class="weather">
+            <div class="weather-widget">
+                <h3>Current Weather</h3>
+                <p id="current-temperature"></p>
+                <p id="current-weather-description"></p>
+                <img src="images/02d@2x.png" alt="cloudy">
+                <table>
+                    <tr>
+                        <th>Day</th>
+                        <th>Temperature</th>
+                        <th>Conditions</th>
+                        <th>Precipitation</th>
+                        <th>Wind</th>
+                    </tr>
 
-                <div class="weather-widget">
-                    <h3>Current Weather</h3>
-                    <p id="current-temperature"></p>
-                    <p id="current-weather-description"></p>
-                    <img src="images/02d@2x.png" alt="cloudy">
-                    <table>
-                        <tr>
-                            <th>Day</th>
-                            <th>Temperature</th>
-                            <th>Conditions</th>
-                            <th>Precipitation</th>
-                            <th>Wind</th>
-                        </tr>
+                    <tr>
+                        <td>Today (Oct 9)</td>
+                        <td>57°F - 60°F</td>
+                        <td>Low clouds</td>
+                        <td>1%</td>
+                        <td>9-10 mph</td>
+                    </tr>
 
-                        <tr>
-                            <td>Today (Oct 9)</td>
-                            <td>57°F - 60°F</td>
-                            <td>Low clouds</td>
-                            <td>1%</td>
-                            <td>9-10 mph</td>
-                        </tr>
-
-                        <tr>
-                            <td>Tomorrow (Oct 10)</td>
-                            <td>54°F - 65°F</td>
-                            <td>Low clouds</td>
-                            <td>25%</td>
-                            <td>10 mph</td>
-                        </tr>
-                        <tr>
-                            <td>Tomorrow (Oct 11)</td>
-                            <td>23-24°C</td>
-                            <td>Low clouds</td>
-                            <td>25%</td>
-                            <td>10 mph</td>
-                        </tr>
-
-
-                    </table>
-
-            </section>
-
-            <div>
-                <h3>Members Directory</h3>
-                <button class="toggle-button" onclick="toggleView()">Toggle View</button>
-
-                <div id="membersContainer" class="card-grid"></div>
-                <div id="spotlight-company"></div>
-                <div id="company-sport"></div>
-
-
+                    <tr>
+                        <td>Tomorrow (Oct 10)</td>
+                        <td>54°F - 65°F</td>
+                        <td>Low clouds</td>
+                        <td>25%</td>
+                        <td>10 mph</td>
+                    </tr>
+                    <tr>
+                        <td>Tomorrow (Oct 11)</td>
+                        <td>23-24°C</td>
+                        <td>Low clouds</td>
+                        <td>25%</td>
+                        <td>10 mph</td>
+                    </tr>
+                </table>
             </div>
+        </section>
 
-
+        <div>
+            <h3>Members Directory</h3>
+            <button class="toggle-button" onclick="toggleView()">Toggle View</button>
+            <div id="membersContainer" class="card-grid"></div>
+            <div id="spotlight-company"></div>
+            <div id="company-sport"></div>
+        </div>
     </main>
     <footer>
         <p>Contact Us: info@artspace.com | +263 772 601 401</p>
