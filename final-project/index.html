@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description"
+        content="This site is for supporting, sharing ideas, helping artist with their artwork to be known everywhere and fast.">
+    <meta name="author" content="Evenage Thelma Gorwa">
+    <title>Site Plan For Art and Crafting</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/javascript.js" defer></script>
+    <script src="data/members.json"></script>
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Art and Crafting">
+    <meta property="og:type" content="website for artists to sell their artwork">
+    <meta property="og:image" content="https://artspace.com/profile.jpg">
+    <meta property="og:url" content="https://www.artspace.com">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header>
+
+        <section id="logo">
+            <a href="#"><img src="images/logo.jpeg" class="logo" alt="logo" width="70px" height="60px"></a>
+        </section>
+
+        <nav>
+            <div class="navbar">
+                <ul class="navbar">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="thank-you.html">Thank you</a></li>
+                    <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="attributions.html">Attributions</a> </li>
+                </ul>
+                <a href="#" id="close"> <i class="fa fa-times" aria-hidden="true"></i></i></a>
+            </div>
+            <div id="mobile">
+                <a href="cart.html"><i class="fa fa-shopping-bag"></i></a>
+                <i id="bar" class="fa fa-outdent" aria-hidden="true"></i>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <h1>Welcome to our Art and Crafting </h1>
+        <section class="hero">
+            <div class="hero-content">
+                <img src="images/hero.webp" alt="hero">
+                <h2>Unleash Creativity</h2>
+                <p>Change your environment with our creativity </p>
+            </div>
+        </section>
+        <section calls="call-to-action">
+            <h2>Call to action</h2>
+            <a href="#join" class="cta-button">Join Our Art and Craft creativity</a>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather">
+
+            <div class="weather-widget">
+                <h2>Current Weather</h2>
+                <p id="current-temperature"></p>
+                <p id="current-weather-description"></p>
+                <img src="images/02d@2x.png" alt="cloudy">
+                <table>
+                    <tr>
+                        <th>Day</th>
+                        <th>Temperature</th>
+                        <th>Conditions</th>
+                        <th>Precipitation</th>
+                        <th>Wind</th>
+                    </tr>
+
+                    <tr>
+                        <td>Today (Oct 25)</td>
+                        <td>57°F - 60°F</td>
+                        <td>Low clouds</td>
+                        <td>1%</td>
+                        <td>9-10 mph</td>
+                    </tr>
+
+                    <tr>
+                        <td>Tomorrow (Oct 26)</td>
+                        <td>54°F - 65°F</td>
+                        <td>Low clouds</td>
+                        <td>25%</td>
+                        <td>10 mph</td>
+                    </tr>
+                    <tr>
+                        <td>Tomorrow (27 oct)</td>
+                        <td>23-24°C</td>
+                        <td>Low clouds</td>
+                        <td>25%</td>
+                        <td>10 mph</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <div>
+            <h3>Members Directory</h3>
+            <button class="toggle-button" onclick="toggleView()">Toggle View</button>
+            <div id="membersContainer" class="card-grid"></div>
+            <div id="spotlight-company"></div>
+            <div id="company-sport"></div>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 ArtSpace. All rights reserved. </p>
+        <p><a href="attributions.html">Resource Attributions</a></p>
+
+    </footer>
+
+</body>
+
+</html>

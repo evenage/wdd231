@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description"
+        content="This site is for supporting, sharing ideas, helping artist with their artwork to be known everywhere and fast.">
+    <meta name="author" content="Evenage Thelma Gorwa">
+    <title>Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/gatedates.js" defer></script>
+    <script src="data/members.json"></script>
+</head>
+
+<body>
+    <header>
+        <section id="logo">
+            <a href="#"><img src="images/logo.jpeg" class="logo" alt="logo" width="70px" height="60px"></a>
+        </section>
+
+
+        <nav>
+            <div class="navbar"></div>
+            <ul class="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="thank-you.html">Thank you</a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
+                <li><a href="attributions.html">Attributions</a> </li>
+            </ul>
+            <a href="#" id="close"> <i class="fa fa-times" aria-hidden="true"></i></i></a>
+        </nav>
+
+    </header>
+    <main>
+        <h1>Events</h1>
+        <section class="hero">
+            <div class="hero-content">
+                <img src="images/hero.webp" alt="hero">
+                <h2>Unleash Creativity</h2>
+                <p>Change your environment with our creativity </p>
+            </div>
+        </section>
+        <!-- Current Events Section -->
+
+        <section>
+            <div class="event-container">
+                <div class="event-item">
+                    <h2>Special Event </h2>
+                    <p>Celebrate our holiday with us at Victoria Falls Art Gallery on 25 December this year, time from
+                        1200hrs featuring art, music and more.
+                        On this day we will have our best artists those with gold in membership level, and we will
+                        be hosting musicians like Jar Praizer, Thomas Mapfumo, Winky D ans somemore.</p>
+                </div>
+                <div class="event-item">
+                    <h2>Recurring Event </h2>
+                    <p>First Friday Art Walk: Explore new exhibitions and meet local artists. Sunday Artist Market: shop
+                        unique art and handmade goods.
+                        Wednesday Art Talks: Engage with industry experts and artists.</p>
+                </div>
+            </div>
+            <div class="event-item">
+                <h3>Talent Show</h3>
+                <p>After every three months we do a talent show for adults and youth.Everyone will be perfoming
+                    doing their best what they are talented at, after that we will see who wins and give a price.If you
+                    are much interested in art we will take you in until you will be a well known artist with your
+                    artworks.
+                </p>
+            </div>
+            <aside class="sidebar">
+                <h2>Visitor Information</h2>
+                <div id="last-visit-message"></div>
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li>Community Festival - June 10</li>
+                    <li>Artist Hosting - Every Saturday</li>
+                    <li>Art Walk - July 15</li>
+                </ul>
+            </aside>
+        </section>
+    </main>
+    <script>
+        // LocalStorage logic for last visit date
+        const lastVisit = localStorage.getItem('lastVisit');
+        const messageContainer = document.getElementById('last-visit-message');
+        const currentTime = Date.now();
+        let message;
+
+        if (!lastVisit) {
+            message = "Welcome! Let us know if you have any questions.";
+        } else {
+            const lastVisitDate = new Date(Number(lastVisit));
+            const timeDifference = currentTime - lastVisitDate.getTime();
+            const daysSinceLastVisit = Math.floor(timeDifference / (1000 * 3600 * 24));
+
+            if (daysSinceLastVisit < 1) {
+                message = "Back so soon! Awesome!";
+            } else {
+                message = `You last visited ${daysSinceLastVisit} ${daysSinceLastVisit === 1 ? 'day' : 'days'} ago.`;
+            }
+        }
+
+        localStorage.setItem('lastVisit', currentTime);
+        messageContainer.textContent = message;
+    </script>
+    <footer>
+        <p>&copy; 2024 ArtSpace. All rights reserved. </p>
+        <p><a href="attributions.html">Resource Attributions</a></p>
+    </footer>
+</body>
+
+</html>
