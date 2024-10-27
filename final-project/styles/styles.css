@@ -9,29 +9,17 @@
 
 
 
-h1,
-h2,
-h4,
-h5,
-h6 {
-    font-size: 20px;
-    color: green;
+h1, h2, h4{
+    font-size: 30px;
+    color: black;
     background-color: azure;
-    text-align: center;
-    align-items: center;
     font-weight: bold;
+    text-align: center;
 
 }
 
 
 
-.section-p1 {
-    padding: 40px 80px;
-}
-
-.section-m1 {
-    margin: 40px 0;
-}
 
 body {
     width: 100%;
@@ -39,14 +27,16 @@ body {
 
 /*header start*/
 
-header {
+.header .h1 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     text-align: center;
+    width: 50%;
 }
    
-   
+.navbar .mobile-icons{
+    display: none;
+}
 
 .navbar {
     display: flex;
@@ -89,15 +79,10 @@ header {
     left: 20px;
 
 }
-
-.mobile {
-    display: none;
-    align-items: center;
+.navbar li a i {
+    display: none; /* Hide icons by default */
 }
 
-.close {
-    display: none;
-}
 
 .logo {
     width: 70px;
@@ -302,8 +287,8 @@ header {
 }
 
 .close-modal {
-    background-color: #5ad10a;
-    color: rgb(128, 22, 22);
+    background-color: grey;
+    color: rgb(24, 110, 43);
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -320,7 +305,7 @@ header {
     width: 45%;
     background-color: #8a6a6a;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid grey;
     margin: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -467,7 +452,7 @@ footer {
 
 /* Hide icons on larger screens */
 @media (min-width: 768px) {
-    .mobile-icons {
+    .mobile {
         display: none;
     }
 }
@@ -496,6 +481,7 @@ footer {
 
     .navbar li {
         margin-bottom: 25px;
+        margin: 10px 0;
     }
 
     .navbar ul {
@@ -503,19 +489,9 @@ footer {
         padding: 0;
     }
     
-    .navbar li {
-        margin: 10px 0;
+    .navbar li a i {
+        display: inline;
     }
-    
-    .navbar a {
-        color: white;
-        text-decoration: none;
-        padding: 10px 15px;
-        display: block;
-    }
-    
-
-
     .mobile {
         display: flex;
         align-items: center;
@@ -526,12 +502,11 @@ footer {
         color: black;
         font-size: 24px;
         padding-left: 20px;
-        display: block;
         cursor: pointer;
     }
 
     .close {
-        display: initial;
+        display: flex;
         position: absolute;
         top: 30px;
         left: 30px;

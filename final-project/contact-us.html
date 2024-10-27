@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/gatedates.js" defer></script>
+    <script src="scripts/javascript.js" defer></script>
     <script src="data/members.json"></script>
 </head>
 
@@ -23,14 +23,12 @@
     <header>
         <h1>Welcome to our Art and Crafting </h1>
     </header>
-
-
     <nav>
         <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="logo" width="70" height="60">
+            </div>
             <ul class="navbar">
-                <section id="logo">
-                    <img src="images/logo.jpeg" class="logo" alt="logo" width="70px" height="60px">
-                </section>
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="shop.html">Shop</a></li>
@@ -41,21 +39,19 @@
                 <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
                 <li><a href="attributions.html">Attributions</a> </li>
             </ul>
-            <a href="#" id="close"> <i class="fa fa-times" aria-hidden="true"></i></i></a>
+            <a href="#" id="close"> <i class="fa fa-times"></i></a>
         </div>
         <div id="mobile">
             <a href="cart.html"><i class="fa fa-shopping-bag"></i></a>
-            <i id="bar" class="fa fa-outdent" aria-hidden="true"></i>
+            <i id="bar" class="fa fa-outdent"></i>
         </div>
     </nav>
-
-    </header>
     <main>
 
         <section class="hero">
+            <h2>Unleash Creativity</h2>
             <div class="hero-content">
                 <img src="images/hero.webp" alt="hero">
-                <h2>Unleash Creativity</h2>
                 <p>Change your environment with our creativity </p>
             </div>
         </section>
@@ -63,23 +59,24 @@
         <div class="container">
             <h1>Contact Us</h1>
             <p>Feel free to reach out to us using the form below or via the contact information provided.</p>
-            <form action="#" method="post"></form> >
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" name="name">
-            </div>
+        </div>
+        <form action="#" method="post">
+            <label>Name</label>
+            <input type="text" name="name">
             <div class="form-group2">
                 <label>email</label>
                 <input type="email" name="email" placeholder="Your Email">
             </div>
             <div class="form-group3">
                 <label for="inquiry">Purpose of Message:</label><br>
-                <input type="radio" id="general_inquiry" name="purpose" value="General Inquiry">
+                <input type="text" id="inquiry" name="inquiry">
                 <label for="general_inquiry">General Inquiry</label><br>
-                <input type="radio" id="reservation_question" name="purpose" value="Reservation Question">
-                <label for="reservation_question">Reservation Question</label><br>
-                <input type="radio" id="website_suggestion" name="purpose" value="Website Suggestion">
-                <label for="website_suggestion">Website Suggestion</label>
+                <input type="text" id="general_inquiry" name="general_inquiry">
+                <label for="reservation_question">Reservation Question:</label><br>
+                <input type="text" id="reservation_question" name="reservation_question">
+                <label for="website_suggestion">Website Suggestion:</label><br>
+                <label for="website_suggestion">Website Suggestion:</label><br>
+                <input type="text" id="website_suggestion" name="website_suggestion">
             </div>
             <div class="form-group4">
                 <label>Message</label>
@@ -91,18 +88,17 @@
                 <label for="newsletter">Please subscribe me to the monthly newsletter</label>
             </div>
             <button type="submit" class="submit-button">Submit</button>
-            </form>
-            <h2>Contact Us</h2>
-            <p>Company Name: Happy Adventouros</p>
-            <p>Address: Tami Walker Fine Art Gallery , Victoria Falls, Zimbabwe</p>
-            <p>Phone: +263 772 601 201</p>
-            <p>Email: artandcrafting@gmail.com</p>
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3796.101685210993!2d25.83785217406826!3d-17.9274105790835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x194fe597567a7233%3A0x5206180d163b531!2sTami%20Walker%20Fine%20Art%20Gallery!5e0!3m2!1sen!2sza!4v1729888976893!5m2!1sen!2sza"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+        </form>
+        <h2>Contact Us</h2>
+        <p>Company Name: Happy Adventouros</p>
+        <p>Address: Tami Walker Fine Art Gallery , Victoria Falls, Zimbabwe</p>
+        <p>Phone: +263 772 601 201</p>
+        <p>Email: artandcrafting@gmail.com</p>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3796.101685210993!2d25.83785217406826!3d-17.9274105790835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x194fe597567a7233%3A0x5206180d163b531!2sTami%20Walker%20Fine%20Art%20Gallery!5e0!3m2!1sen!2sza!4v1729888976893!5m2!1sen!2sza"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </main>
     <footer>

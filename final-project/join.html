@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/gatedates.js" defer></script>
+    <script src="scripts/javascript.js" defer></script>
     <script src="data/members.json"></script>
 
     <!-- Facebook Meta Tags -->
@@ -32,10 +32,10 @@
     </header>
     <nav>
         <div class="navbar">
+            <div class="logo">
+                <img src="images/logo.jpeg" class="logo" alt="logo" width="70" height="60">
+            </div>
             <ul class="navbar">
-                <section id="logo">
-                    <img src="images/logo.jpeg" class="logo" alt="logo" width="70px" height="60px">
-                </section>
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="shop.html">Shop</a></li>
@@ -46,22 +46,16 @@
                 <li><a href="cart.html"><i class="fa fa-shopping-bag"></i></a></li>
                 <li><a href="attributions.html">Attributions</a> </li>
             </ul>
-            <a href="#" id="close"> <i class="fa fa-times" aria-hidden="true"></i></i></a>
-        </div>
+            <a href="#" id="close"> <i class="fa fa-times" aria-hidden="true"></i></a>
         </div>
         <div id="mobile">
             <a href="cart.html"><i class="fa fa-shopping-bag"></i></a>
             <i id="bar" class="fa fa-outdent" aria-hidden="true"></i>
         </div>
     </nav>
-
-    </header>
-
     <main>
-
         <section class="form-section">
             <h2>Membership Application</h2>
-
             <form action="thankyou.html" method="get">
                 <label for="first-name">First Name:
                     <input type="text" id="first-name" name="first-name" title="First Name" autocomplete="given-name"
@@ -93,8 +87,9 @@
                 </label>
                 <div class="card-container">
                     <div class="card">
-                        <label for="membership">Membership Level:
+                        <label for="membership">
                             <select id="membership" name="membership" required>
+                                <option value="">Select a membership level</option>
                                 <option value="bronze">Bronze Membership</option>
                                 <option value="silver">Silver Membership</option>
                                 <option value="gold">Gold Membership</option>
